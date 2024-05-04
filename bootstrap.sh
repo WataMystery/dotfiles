@@ -2,7 +2,7 @@
 
 case $1 in
    laptop|desktop)
-     echo "I'm setting up your $1"
+     echo "I'm setting up your $0"
      sudo dnf install -y ansible python3-dnf
      ansible-playbook -i localhost, -c local --ask-become-pass setups/$1.yml ;;
    *)
